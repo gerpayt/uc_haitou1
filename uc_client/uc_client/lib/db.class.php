@@ -38,7 +38,7 @@ class ucclient_db {
 				$this->halt('Can not connect to MySQL server');
 			}
 		} else {
-			if(!$this->link = mysql_connect($dbhost, $dbuser, $dbpw, $dbnewlink)) {
+			if(!$this->link = mysql_connect($dbhost, $dbuser, $dbpw)) {
 				$this->halt('Can not connect to MySQL server');
 			}
 		}

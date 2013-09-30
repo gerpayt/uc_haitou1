@@ -142,6 +142,13 @@ class usercontrol extends base {
 		return $this->_check_email($email);
 	}
 
+	function onget_username_by_email() {
+		$this->init_input();
+		$email = $this->input('email');
+		$row = $this->db->result_first("SELECT username FROM ".UC_DBTABLEPRE."members WHERE `email` = '$email'");
+		return $row;
+	}
+
 	function oncheck_username() {
 		$this->init_input();
 		$username = $this->input('username');
